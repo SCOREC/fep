@@ -4,6 +4,7 @@
 #include <apfMesh2.h>
 #include <PCU.h>
 #include <apfNumbering.h>
+#include <apfShape.h>
 
 int main(int argc, char** argv)
 {
