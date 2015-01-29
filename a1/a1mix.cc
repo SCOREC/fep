@@ -3,6 +3,7 @@
 #include <apfMDS.h>
 #include <apfMesh2.h>
 #include <PCU.h>
+#include <apfNumbering.h>
 
 int main(int argc, char** argv)
 {
