@@ -6,7 +6,7 @@ if [ ! -z "$x" ]; then
  exit 1
 fi
 module load xl
-pumi=/gpfs/u/barn/PGES/shared/pumi/opt/lib/pkgconfig
+pumi=/gpfs/u/barn/FEP2/shared/pumi/opt/lib/pkgconfig
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$pumi
 set -x
 CXXFLAGS="$CXXFLAGS -g "
