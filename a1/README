@@ -15,7 +15,7 @@ README - this file
 ./build.sh a1quad
 
 #run
-sbatch ./run.sh a1tet
-sbatch ./run.sh a1mix
-sbatch ./run.sh a1quad
+sbatch ./run.sh ./a1tet
+sbatch ./run.sh ./a1mix
+sbatch ./run.sh ./a1quad
 
