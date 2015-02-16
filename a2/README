@@ -1,0 +1,14 @@
+#contents
+a2.cc - source code template
+build.sh - build script, see below
+run.sh - run script, see below
+README - this file
+
+#build
+./build.sh a2
+
+#run
+sbatch ./run.sh ./a2 reorder_a.smb
+sbatch ./run.sh ./a2 reorder_b.smb
+sbatch ./run.sh ./a2 reorder_c.smb
+
