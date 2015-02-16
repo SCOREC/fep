@@ -8,7 +8,7 @@ README - this file
 ./build.sh a2
 
 #run
-sbatch ./run.sh ./a2 reorder_a.smb
-sbatch ./run.sh ./a2 reorder_b.smb
-sbatch ./run.sh ./a2 reorder_c.smb
+sbatch ./run.sh ./a2 reorder_a.dmg reorder_a.smb
+sbatch ./run.sh ./a2 reorder_b.dmg reorder_b.smb
+sbatch ./run.sh ./a2 reorder_c.dmg reorder_c.smb
 
