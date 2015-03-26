@@ -1,0 +1,14 @@
+#contents
+a3.cc - source code template
+build.sh - build script, see below
+run.sh - run script, see below
+cube.dmg - geometric model
+parallelMesh*.smb - two-part parallel mesh
+README - this file
+
+#build
+./build.sh a2
+
+#run
+sbatch ./run.sh ./a3
+
