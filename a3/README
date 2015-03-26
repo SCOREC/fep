@@ -7,7 +7,7 @@ parallelMesh*.smb - two-part parallel mesh
 README - this file
 
 #build
-./build.sh a2
+./build.sh a3
 
 #run
 sbatch ./run.sh ./a3
