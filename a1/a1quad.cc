@@ -1,24 +1,18 @@
-#include <apf.h>
-#include <gmi_null.h>
-#include <apfMDS.h>
-#include <apfMesh2.h>
 #include <PCU.h>
-#include <apfNumbering.h>
+#include <pumi.h>
 
 int main(int argc, char** argv)
 {
   MPI_Init(&argc,&argv);
-  PCU_Comm_Init();
-  gmi_register_null();
-  gmi_model* g = gmi_load(".null");
-  apf::Mesh2* m = apf::makeEmptyMdsMesh(g, 2, false);
+  pumi_start();
+  pGeom geom = pumi_geom_load(NULL, "null");
+  pMesh mesh = pumi_mesh_create(geom, 3);
   //
   // insert mesh creation code here
   //
-  apf::writeVtkFiles("outQuad", m);
-  m->destroyNative();
-  apf::destroyMesh(m);
-  PCU_Comm_Free();
+  pumi_mesh_write(mesh,"outQuad","vtk");
+  pumi_mesh_delete(mesh);
+  pumi_finalize();
   MPI_Finalize();
 }
 

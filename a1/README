@@ -9,13 +9,16 @@ tet-mesh-10.smb - tet mesh
 run.sh - run script, see below
 README - this file
 
+#setup
+./setup.sh
+
 #build
 ./build.sh a1tet
 ./build.sh a1mix
 ./build.sh a1quad
 
 #run
-sbatch ./run.sh ./a1tet
-sbatch ./run.sh ./a1mix
-sbatch ./run.sh ./a1quad
+sbatch ./run.sh ./build/a1tet
+sbatch ./run.sh ./build/a1mix
+sbatch ./run.sh ./build/a1quad
 

@@ -1,14 +1,11 @@
 #!/bin/bash -e
-x=$(module load xl 2>&1)
-if [ ! -z "$x" ]; then
- echo $x
- echo "Module conflict.... exiting."
- exit 1
-fi
-module load xl
-pumi=/gpfs/u/barn/FEP2/shared/pumi/dbg/lib/pkgconfig
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$pumi
+[ $# -lt 1 ] && echo "Usage $0 <name of binary> [verbose=on|off]" && exit 1
+module load xl proprietary/simmetrix/simModSuite proprietary/core-sim/xl
+[ ! -e build ] && echo "ERROR: build directory does not exist. Run setup.sh" && exit 1
 set -x
-CXXFLAGS="$CXXFLAGS -g "
-mpicxx $1.cc $CXXFLAGS `pkg-config --cflags --libs libmds` -o $1
+cd build
+verbose=""
+[ "$2" = "on" ] && verbose="VERBOSE=1"
+make $verbose $1
+cd -
 set +x
