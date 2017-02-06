@@ -4,20 +4,22 @@ a1mix.cc - source code template for operations 4 and 5
 a1quad.cc - source code template for operation 3
 build.sh - build script, see below
 cube.dmg - geometric model
+CMakeLists.txt - cmake file for building the examples
 mixed-mesh-10.smb - mixed mesh
 tet-mesh-10.smb - tet mesh
 run.sh - run script, see below
 README - this file
+setup.sh - setup script, see below
 
-#setup
+#setup - run this once
 ./setup.sh
 
-#build
+#build - run this when you need to rebuild the code
 ./build.sh a1tet
 ./build.sh a1mix
 ./build.sh a1quad
 
-#run
+#run - run the exectuable via SLURM
 sbatch ./run.sh ./build/a1tet
 sbatch ./run.sh ./build/a1mix
 sbatch ./run.sh ./build/a1quad
