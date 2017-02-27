@@ -18,8 +18,8 @@ README - this file
 #build
 ./build.sh a2
 
-#run
-sbatch ./run.sh ./build/a2 reorder_a.dmg reorder_a.smb
-sbatch ./run.sh ./build/a2 reorder_b.dmg reorder_b.smb
-sbatch ./run.sh ./build/a2 reorder_c.dmg reorder_c.smb
+#run - the last argument adds mid-edge and face nodes
+sbatch ./run.sh ./build/a2 reorder_a.dmg reorder_a.smb 1
+sbatch ./run.sh ./build/a2 reorder_b.dmg reorder_b.smb 0
+sbatch ./run.sh ./build/a2 reorder_c.dmg reorder_c.smb 0
 
