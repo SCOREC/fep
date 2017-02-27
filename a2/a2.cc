@@ -1,14 +1,9 @@
-#include <apf.h>
-#include <gmi_mesh.h>
-#include <apfMDS.h>
-#include <apfMesh2.h>
 #include <PCU.h>
-#include <apfNumbering.h>
-#include <apfShape.h>
+#include <pumi.h>
 
-bool hasNode(apf::Mesh2* m, apf::MeshEntity* e)
+bool hasNode(pMesh m, pMeshEnt e)
 {
-  return m->getShape()->countNodesOn(m->getType(e)) > 0;
+  return pumi_shape_hasNode(pumi_mesh_getShape(m),pumi_ment_getTopo(e));
 }
 
 int main(int argc, char** argv)
@@ -18,16 +13,15 @@ int main(int argc, char** argv)
     return 0;
   }
   MPI_Init(&argc,&argv);
-  PCU_Comm_Init();
-  gmi_register_mesh();
-  apf::Mesh2* m = apf::loadMdsMesh(argv[1], argv[2]);
+  pumi_start();
+  pGeom geom = pumi_geom_load(argv[1],"mesh");
+  pMesh mesh = pumi_mesh_load(geom,argv[2],1);
   //
   // insert reordering (numbering) code here
   //
-  apf::writeVtkFiles("number", m);
-  m->destroyNative();
-  apf::destroyMesh(m);
-  PCU_Comm_Free();
+  pumi_mesh_write(mesh,"numbered","vtk");
+  pumi_mesh_delete(mesh);
+  pumi_finalize();
   MPI_Finalize();
 }
 

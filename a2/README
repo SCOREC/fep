@@ -1,7 +1,9 @@
 #contents
 a2.cc - source code template
+setup.sh - setup script, see below
 build.sh - build script, see below
 run.sh - run script, see below
+CMakeLists.txt - cmake file for building the examples
 reorder_a.dmg - model for example A
 reorder_a0.smb - quadratic quadrilateral mesh for example A
 reorder_b.dmg - model for example B
@@ -10,11 +12,14 @@ reorder_c.dmg - model for example C
 reorder_c0.smb - linear triangle mesh for example C
 README - this file
 
+#setup - run this once
+./setup.sh
+
 #build
 ./build.sh a2
 
 #run
-sbatch ./run.sh ./a2 reorder_a.dmg reorder_a.smb
-sbatch ./run.sh ./a2 reorder_b.dmg reorder_b.smb
-sbatch ./run.sh ./a2 reorder_c.dmg reorder_c.smb
+sbatch ./run.sh ./build/a2 reorder_a.dmg reorder_a.smb
+sbatch ./run.sh ./build/a2 reorder_b.dmg reorder_b.smb
+sbatch ./run.sh ./build/a2 reorder_c.dmg reorder_c.smb
 
