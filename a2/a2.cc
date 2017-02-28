@@ -1,6 +1,7 @@
 #include <PCU.h>
 #include <pumi.h>
 #include <stdlib.h>
+#include <string.h>
 
 bool hasNode(pMesh m, pMeshEnt e)
 {
