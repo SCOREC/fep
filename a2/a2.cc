@@ -19,8 +19,7 @@ int main(int argc, char** argv)
   pumi_start();
   pGeom geom = pumi_geom_load(argv[1],"mesh");
   pMesh mesh = pumi_mesh_load(geom,argv[2],1);
-  // adds mid-edge nodes for *reorder_c* trianglular mesh
-  if(!strcmp (argv[1], "reorder_c.dmg"))
+  if(!strcmp (argv[1], "reorder_a.dmg"))
     pumi_mesh_setShape(mesh,pumi_shape_getLagrange(2));
 
   //
