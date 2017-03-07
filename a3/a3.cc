@@ -1,20 +1,16 @@
-#include <apf.h>
-#include <gmi_mesh.h>
-#include <apfMDS.h>
-#include <apfMesh2.h>
 #include <PCU.h>
-#include <apfNumbering.h>
-#include <apfShape.h>
+#include <pumi.h>
 
 int main(int argc, char** argv)
 {
   MPI_Init(&argc,&argv);
-  PCU_Comm_Init();
-  gmi_register_mesh();
-  apf::Mesh2* m = apf::loadMdsMesh("cube.dmg", "parallelMesh.smb");
+  pumi_start();
+  pGeom geom = pumi_geom_load("cube.dmg","mesh");
+  pMesh mesh = pumi_mesh_load(geom,"parallelMesh.smb",2);
 
-  m->destroyNative();
-  apf::destroyMesh(m);
-  PCU_Comm_Free();
+  /* your code here */
+
+  pumi_mesh_delete(mesh);
+  pumi_finalize();
   MPI_Finalize();
 }
