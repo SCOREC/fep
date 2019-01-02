@@ -1,9 +1,12 @@
 #contents
 a3.cc - source code template
+cube.dmg - geometric model
+parallelMesh*.smb - two-part mesh
 setup.sh - setup script, see below
 build.sh - build script, see below
 run.sh - run script, see below
 CMakeLists.txt - cmake file for building the examples
+README - this file
 
 #setup - run this once
 ./setup.sh
