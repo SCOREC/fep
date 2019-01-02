@@ -19,8 +19,10 @@ int main(int argc, char** argv)
   pumi_start();
   pGeom geom = pumi_geom_load(argv[1],"mesh");
   pMesh mesh = pumi_mesh_load(geom,argv[2],1);
-  if(!strcmp (argv[1], "reorder_c.dmg"))
+  if(!strcmp (argv[1], "reorder_c.dmg")) {
     pumi_mesh_setShape(mesh,pumi_shape_getLagrange(2));
+    pumi_mesh_print(mesh);
+  }
 
   //
   // insert reordering (numbering) code here
