@@ -18,4 +18,4 @@ PUMI repo issues: https://github.com/SCOREC/core/issues -->
 
 ## Code 
 
-Provide any code that is related to your question (link or paste).
+<!-- Provide any code that is related to your question (link or paste).  -->
