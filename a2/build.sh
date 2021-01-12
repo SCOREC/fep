@@ -1,5 +1,5 @@
 #!/bin/bash -e
-[ $# -lt 1 ] && echo "Usage $0 <name of binary> [verbose=on|off]" && exit 1
+[ $# -gt 1 ] && echo "Usage $0 [verbose=on|off]" && exit 1
 module use /gpfs/u/software/erp-spack-install/v0160_gcc910_1/lmod/linux-centos7-x86_64/gcc/9.1.0/
 module load gcc/9.1.0/1
 module load openmpi/4.0.1
@@ -10,7 +10,7 @@ module load pumi/master-int32-sim
 set -x
 cd build
 verbose=""
-[ "$2" = "on" ] && verbose="VERBOSE=1"
-make $verbose $1
+[ "$1" = "on" ] && verbose="VERBOSE=1"
+make $verbose
 cd -
 set +x
