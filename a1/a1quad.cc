@@ -5,7 +5,7 @@ int main(int argc, char** argv)
 {
   MPI_Init(&argc,&argv);
   pumi_start();
-  pGeom geom = pumi_geom_load(NULL, "null", "");
+  pGeom geom = pumi_geom_load("", "null");
   pMesh mesh = pumi_mesh_create(geom, 2);
   //
   // insert mesh creation code here
