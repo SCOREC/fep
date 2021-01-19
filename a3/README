@@ -8,6 +8,10 @@ run.sh - run script, see below
 CMakeLists.txt - cmake file for building the examples
 README - this file
 
+#connect - do this each time you start work
+ssh erpfen01
+ssh erp14
+
 #setup - run this once
 ./setup.sh
 

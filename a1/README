@@ -11,6 +11,10 @@ run.sh - run script, see below
 README - this file
 setup.sh - setup script, see below
 
+#connect - do this each time you start work
+ssh erpfen01
+ssh erp14
+
 #setup - run this once
 ./setup.sh
 
