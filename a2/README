@@ -13,7 +13,6 @@ reorder_c0.smb - quadratic triangle mesh for example C
 README - this file
 
 #connect - do this each time you start work
-ssh erpfen01
 ssh erp14
 
 #setup - run this once
