@@ -107,9 +107,12 @@ int main(int argc, char *argv[])
 
   }
 
-  printf("element stiffness corresponding to the diffusive term\n");
-  elmat_diff.Print();
-  printf("\n");
+  if (myid == 0)
+  {
+    printf("element stiffness corresponding to the diffusive term\n");
+    elmat_diff.Print();
+    printf("\n");
+  }
 
 
   // As part of Task 2: Compute the element stiffness matrix corresponding to the advective term.
@@ -142,9 +145,12 @@ int main(int argc, char *argv[])
 
   }
 
-  printf("element stiffness corresponding to the advective term\n");
-  elmat_adv.Print();
-  printf("\n");
+  if (myid == 0)
+  {
+    printf("element stiffness corresponding to the advective term\n");
+    elmat_adv.Print();
+    printf("\n");
+  }
 
 
   /* clean ups */

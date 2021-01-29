@@ -136,7 +136,8 @@ int main(int argc, char *argv[])
     }
     total_error += elem_error;
   }
-  printf("L2 norm of the interpolation error is %e \n", sqrt(total_error));
+  if (myid == 0)
+    printf("L2 norm of the interpolation error is %e \n", sqrt(total_error));
 
   /* clean ups */
   delete fes;
