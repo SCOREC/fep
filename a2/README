@@ -16,7 +16,7 @@ README - this file
 ./setup.sh
 
 #build
-./build.sh a2
+./build.sh
 
 #run
 sbatch ./run.sh ./build/a2 reorder_a.dmg reorder_a.smb
