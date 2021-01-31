@@ -29,7 +29,12 @@ source erp_env_setup.sh.sh
 5. build all the examples by running
 
 ```
-MFEM_INSTALL_DIR=$MFEM_ROOT make -f makefile
+MFEM_INSTALL_DIR=$MFEM_ROOT make
+```
+
+to clean your build you can use
+```
+MFEM_INSTALL_DIR=$MFEM_ROOT make clean
 ```
 
 ## RUN INSTRUCTIONS
