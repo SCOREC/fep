@@ -1,32 +1,18 @@
 ## BUILD INSTRUCTIONS
 
-1. allocate a himem or debug node to compile
-
-
-```
-salloc -n 1 -N 1 -t 60 -p himem
-```
-
-or
+1. connect to the high memory node
 
 ```
-salloc -n 1 -N 1 -t 60 -p debug
+ssh erp14
 ```
 
-2. get the node name with 'squeue -l'; i.e., 'erp14' and ssh to it
-
-```
-mynode=`squeue -l | awk '/erp/ {print $9}'`
-ssh $mynode
-```
-
-3. setup the environment by running
+2. setup the environment by running
 
 ```
 source erp_env_setup.sh.sh
 ```
 
-5. build all the examples by running
+3. build all the examples by running
 
 ```
 MFEM_INSTALL_DIR=$MFEM_ROOT make
@@ -42,7 +28,7 @@ MFEM_INSTALL_DIR=$MFEM_ROOT make clean
 to run an executables use `sbatch` and the provided `run.sh` script as follows
 
 ```
-sbatch ./run.sh .executable arguments
+sbatch ./run.sh ./executable arguments
 ```
 
 for example you can have

@@ -15,13 +15,13 @@ MFEM_BUILD_DIR ?= ..
 SRC = $(if $(MFEM_DIR:..=),$(MFEM_DIR)/examples/,)
 CONFIG_MK = $(MFEM_BUILD_DIR)/config/config.mk
 # Use the MFEM install directory
-MFEM_INSTALL_DIR ?= ..
+MFEM_INSTALL_DIR = $(MFEM_ROOT)
 CONFIG_MK = $(MFEM_INSTALL_DIR)/share/mfem/config.mk
 
 MFEM_LIB_FILE = $(MFEM_INSTALL_DIR)/lib/libmfem.a
 include $(CONFIG_MK)
 
-SEQ_EXAMPLES = mfem_2_vtk \
+SEQ_EXAMPLES = \
 a4_projection \
 a4_interpolation \
 a4_element_stiffness \
