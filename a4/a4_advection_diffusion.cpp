@@ -108,6 +108,9 @@ int main(int argc, char *argv[])
   // TODO Setup and solve the advection diffusion problem here
   // for both standard Galerkin from and stabilized versions
   //
+  // The advection term can be added by using ConvectionIntegrator (refer to mfem documentation
+  // here http://mfem.github.io/doxygen/html/index.html for more details)
+  //
   // Note that for the version with stabilization you will need to define a Matrix of diffusivity.
   // That can be done by using
   // MatrixCoefficient* kappa_tau = new MatrixConstantCoefficient(k_tau);
