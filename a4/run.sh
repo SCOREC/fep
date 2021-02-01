@@ -2,7 +2,7 @@
 #SBATCH --job-name=fepsA4
 #SBATCH --partition=debug
 #SBATCH -t 00:10:00
-#SBATCH -n 1 
+#SBATCH -n 1
 
 source erp_env_setup.sh
 
