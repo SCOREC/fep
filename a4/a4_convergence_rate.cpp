@@ -171,8 +171,6 @@ int main(int argc, char *argv[])
   gmres.SetOperator(*A.As<HypreParMatrix>());
   gmres.SetPreconditioner(amg);
   gmres.Mult(B, X);
-  /* GSSmoother M((SparseMatrix&)(*A)); */
-  /* GMRES(*A, M, B, X, 0, 200, 50, 1e-24, 0.0); */
 #endif
 
   // recover the solution
@@ -209,7 +207,6 @@ int main(int argc, char *argv[])
   delete serial_mesh;
   delete fes;
   delete fec;
-  /* MPI_Finalize(); */
 
   return 0;
 }
