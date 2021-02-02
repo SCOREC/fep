@@ -9,7 +9,7 @@ ssh erp14
 2. setup the environment by running
 
 ```
-source erp_env_setup.sh.sh
+source erp_env_setup.sh
 ```
 
 3. build all the examples by running
