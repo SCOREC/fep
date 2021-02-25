@@ -16,7 +16,7 @@
 //               w.a.grad(u) - div(kappa.grad(u))= f on a square domain [0,1]x[0,1] and the following BCs
 //
 //               u(0,y) = 0
-//               u(1,y) = 0
+//               u(1,y) = 1
 //               du/dy(x,0) = 0 (this is a zero-flux condition)
 //               du/dy(x,1) = 0 (this is a zero-flux condition)
 //
