@@ -18,7 +18,10 @@ source erp_env_setup.sh
 make
 ```
 
-to clean your build you can use
+By this piont you should see the executables in the folder, which will be used to run the cases.
+
+
+Note that if you need to clean your build (i.e., removeing the executables) you can use
 ```
 make clean
 ```
