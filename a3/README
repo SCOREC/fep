@@ -9,7 +9,7 @@ CMakeLists.txt - cmake file for building the examples
 README - this file
 
 #connect - do this each time you start work
-ssh erp14
+ssh erp01
 
 #setup - run this once
 ./setup.sh

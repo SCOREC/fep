@@ -1,9 +1,9 @@
 ## BUILD INSTRUCTIONS
 
-1. connect to the high memory node
+1. connect - do this each time you start work
 
 ```
-ssh erp14
+ssh erp01
 ```
 
 2. setup the environment by running
@@ -18,10 +18,10 @@ source erp_env_setup.sh
 make
 ```
 
-By this piont you should see the executables in the folder, which will be used to run the cases.
+By this point you should see the executables in the folder, which will be used to run the cases.
 
 
-Note that if you need to clean your build (i.e., removeing the executables) you can use
+Note that if you need to clean your build (i.e., removing the executables) you can use
 ```
 make clean
 ```

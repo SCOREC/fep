@@ -12,7 +12,7 @@ README - this file
 setup.sh - setup script, see below
 
 #connect - do this each time you start work
-ssh erp14
+ssh erp01
 
 #setup - run this once
 ./setup.sh
