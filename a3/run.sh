@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#SBATCH --job-name=fepsA2
+#SBATCH --job-name=fepsA3
 #SBATCH --partition=debug
 #SBATCH -t 00:10:00
 #SBATCH -n 1
