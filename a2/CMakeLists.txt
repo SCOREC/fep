@@ -31,11 +31,11 @@ else()
 endif()
 
 #this is just example code, do your own thing
-add_executable(a3 a3.cc)
+add_executable(a2 a2.cc)
 
 #for any targets that use PUMI, just use this command
 #to it to include the right directories and link to all
 #the scorec libraries automatically.
 #we recommend PUBLIC if the target is a library and
 #PRIVATE if the target is an executable
-target_link_libraries(a3 PRIVATE SCOREC::core)
+target_link_libraries(a2 PRIVATE SCOREC::core)

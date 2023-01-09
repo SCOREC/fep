@@ -1,5 +1,5 @@
 #contents
-a3.cc - source code template
+a2.cc - source code template
 cube.dmg - geometric model
 parallelMesh*.smb - two-part mesh
 setup.sh - setup script, see below
@@ -18,5 +18,5 @@ ssh erp01
 ./build.sh
 
 #run
-sbatch ./run.sh ./build/a3
+sbatch ./run.sh ./build/a2
 
