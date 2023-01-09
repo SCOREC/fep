@@ -1,11 +1,15 @@
 #contents
-a3.cc - source code template
-cube.dmg - geometric model
-parallelMesh*.smb - two-part mesh
+a2.cc - source code template
 setup.sh - setup script, see below
 build.sh - build script, see below
 run.sh - run script, see below
 CMakeLists.txt - cmake file for building the examples
+reorder_a.dmg - model for example A
+reorder_a0.smb - linear quadrilateral mesh for example A
+reorder_b.dmg - model for example B
+reorder_b0.smb - linear triangle mesh for example B
+reorder_c.dmg - model for example C
+reorder_c0.smb - quadratic triangle mesh for example C
 README - this file
 
 #connect - do this each time you start work
@@ -18,5 +22,7 @@ ssh erp01
 ./build.sh
 
 #run
-sbatch ./run.sh ./build/a3
+sbatch ./run.sh ./build/a2 reorder_a.dmg reorder_a.smb
+sbatch ./run.sh ./build/a2 reorder_b.dmg reorder_b.smb
+sbatch ./run.sh ./build/a2 reorder_c.dmg reorder_c.smb
 
