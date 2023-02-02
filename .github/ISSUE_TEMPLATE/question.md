@@ -2,7 +2,7 @@
 name: Question
 about: Ask a question about PUMI or the FEP assignments
 title: "[Question] <3-5 word title>"
-labels: S21
+labels: S23
 assignees: ''
 
 ---
