@@ -1,10 +1,12 @@
 #include <PCU.h>
 #include <pumi.h>
+#include <lionPrint.h>
 
 int main(int argc, char** argv)
 {
   MPI_Init(&argc,&argv);
   pumi_start();
+  lion_set_verbosity(3);
   pGeom geom = pumi_geom_load("cube.dmg", "mesh");
   pMesh mesh = pumi_mesh_load(geom, "mixed-mesh-1.smb",1);
   //
