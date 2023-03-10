@@ -424,6 +424,7 @@ void LG_TriangleElement::CalcDShape(
 
 // LG_FECollection implementation
 LG_FECollection::LG_FECollection(const int p, const int dim, const int btype)
+  : FiniteElementCollection(p)
 {
   MFEM_VERIFY(p >= 1, "LG_FECollection requires order >= 1.");
   MFEM_VERIFY(p <  3, "LG_FECollection requires order <  3.");
